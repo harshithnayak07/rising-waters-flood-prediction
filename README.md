@@ -2,37 +2,100 @@
 
 ## Project Overview
 
-Rising Waters is a production-oriented Flood Prediction System foundation created for an internship project. This repository currently contains the base Flask application structure and supporting project directories.
+Rising Waters Flood Prediction System is a machine learning-based flood prediction web application built using Flask and XGBoost. The system analyzes weather and rainfall-related parameters, preprocesses the data, compares multiple machine learning models, and uses the best-performing model for flood risk prediction through a responsive web interface.
 
-Machine learning, prediction logic, frontend pages, styling, JavaScript, and notebooks are intentionally not implemented at this stage.
+This project is designed to be beginner-friendly while still following a clean end-to-end machine learning workflow: data analysis, preprocessing, model training, model comparison, model saving, and Flask deployment.
 
-## Folder Structure
+## Features
+
+- Flood prediction using weather parameters
+- Data analysis and visualization
+- Data preprocessing
+- Multiple ML models
+- Model comparison
+- XGBoost selected as final model
+- Flask web application
+- Responsive frontend
+
+## Tech Stack
+
+- Python
+- Flask
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- XGBoost
+- HTML
+- CSS
+- JavaScript
+- Joblib
+
+## Project Structure
 
 ```text
 rising-waters-flood-prediction/
-├── app.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-├── data/
-├── notebooks/
-├── models/
-├── templates/
-├── static/
-│   ├── css/
-│   └── js/
-└── screenshots/
+|-- app.py
+|-- requirements.txt
+|-- README.md
+|-- data/
+|   `-- flood_dataset.xlsx
+|-- models/
+|   |-- floods.save
+|   `-- transform.save
+|-- notebooks/
+|   `-- FloodPrediction.ipynb
+|-- src/
+|   `-- train_models.py
+|-- templates/
+|   |-- home.html
+|   |-- index.html
+|   |-- chance.html
+|   `-- no_chance.html
+|-- static/
+|   |-- css/
+|   |   `-- main.css
+|   `-- js/
+|       `-- main.js
+`-- screenshots/
 ```
 
-### Directory Purpose
+## Machine Learning Workflow
 
-- `data/`: Stores raw, processed, or external datasets for future flood prediction work.
-- `notebooks/`: Reserved for exploratory analysis and experimentation notebooks.
-- `models/`: Reserved for trained model artifacts and serialized files.
-- `templates/`: Reserved for future Flask HTML templates.
-- `static/css/`: Reserved for future stylesheet files.
-- `static/js/`: Reserved for future JavaScript files.
-- `screenshots/`: Stores application screenshots, reports, or visual project evidence.
+```text
+Dataset
+|
+v
+EDA
+|
+v
+Preprocessing
+|
+v
+Feature Scaling
+|
+v
+Decision Tree
+|
+v
+Random Forest
+|
+v
+KNN
+|
+v
+XGBoost
+|
+v
+Model Comparison
+|
+v
+Save Model
+|
+v
+Flask Deployment
+```
 
 ## Installation
 
@@ -43,11 +106,13 @@ git clone <repository-url>
 cd rising-waters-flood-prediction
 ```
 
-2. Create and activate a virtual environment.
+2. Create a virtual environment.
 
 ```bash
 python -m venv venv
 ```
+
+3. Activate the virtual environment.
 
 On Windows:
 
@@ -61,22 +126,69 @@ On macOS or Linux:
 source venv/bin/activate
 ```
 
-3. Install dependencies.
+4. Install the required dependencies.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Running Instructions
+## Running the Project
 
-Run the Flask application:
+1. Train and save the final model if the saved model is not already available.
+
+```bash
+python src/train_models.py
+```
+
+2. Start the Flask application.
 
 ```bash
 python app.py
 ```
 
-Open the local development URL shown in the terminal, usually:
+3. Open the application in your browser.
 
 ```text
 http://127.0.0.1:5000/
 ```
+
+## Application Screenshots
+
+### Home Page
+
+Add screenshot here:
+
+```text
+screenshots/home_page.png
+```
+
+### Prediction Form
+
+Add screenshot here:
+
+```text
+screenshots/prediction_form.png
+```
+
+### Flood Result
+
+Add screenshot here:
+
+```text
+screenshots/flood_result.png
+```
+
+### No Flood Result
+
+Add screenshot here:
+
+```text
+screenshots/no_flood_result.png
+```
+
+## Future Improvements
+
+- User authentication
+- Database integration
+- Live weather API
+- Cloud deployment
