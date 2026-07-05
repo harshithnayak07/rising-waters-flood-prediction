@@ -156,39 +156,18 @@ http://127.0.0.1:5000/
 
 ### Home Page
 
-Add screenshot here:
-
-```text
-screenshots/home_page.png
-```
+![Home Page](screenshots/home_page.png)
 
 ### Prediction Form
 
-Add screenshot here:
-
-```text
-screenshots/prediction_form.png
-```
+![Prediction Form](screenshots/prediction_form.png)
 
 ### Flood Result
 
-Add screenshot here:
-
-```text
-screenshots/flood_result.png
-```
+![Flood Result](screenshots/flood_result.png)
 
 ### No Flood Result
 
-Add screenshot here:
+![No Flood Result](screenshots/no_flood_result.png)
 
-```text
-screenshots/no_flood_result.png
-```
 
-## Future Improvements
-
-- User authentication
-- Database integration
-- Live weather API
-- Cloud deployment
