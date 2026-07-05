@@ -1,0 +1,61 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Distribution and packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Python test and coverage artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Flask environment files
+.env
+.env.*
+instance/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Local data and generated model artifacts
+data/raw/
+data/processed/
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.onnx
+
+# Generated reports and caches
+reports/
+cache/
+.cache/
