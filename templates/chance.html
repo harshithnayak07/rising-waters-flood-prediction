@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Risk Detected</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <main class="result-page risk-page">
+        <section class="result-card risk-card">
+            <p class="eyebrow">Prediction Result</p>
+            <h1>Flood Risk Detected</h1>
+            <p>The submitted conditions indicate a possible flood risk.</p>
+            <a class="primary-button danger-button" href="/predict">Predict Again</a>
+        </section>
+    </main>
+</body>
+</html>

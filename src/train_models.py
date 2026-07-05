@@ -264,7 +264,16 @@ def compare_models(X_train, X_test, y_train, y_test):
     print("----------------")
     print(display_table.to_string(index=False))
 
-    best_index = results_table["Accuracy"].idxmax()
+    highest_accuracy = results_table["Accuracy"].max()
+    tied_best_models = results_table[results_table["Accuracy"] == highest_accuracy]
+
+    if "XGBoost" in tied_best_models["Model Name"].values:
+        best_index = tied_best_models[
+            tied_best_models["Model Name"] == "XGBoost"
+        ].index[0]
+    else:
+        best_index = tied_best_models.index[0]
+
     best_model_name = results_table.loc[best_index, "Model Name"]
     best_accuracy = results_table.loc[best_index, "Accuracy"]
     best_model = results_table.loc[best_index, "Model"]

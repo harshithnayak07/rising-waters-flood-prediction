@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Risk Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="form-card">
+            <div class="section-header">
+                <p class="eyebrow">Prediction Form</p>
+                <h1>Flood Risk Prediction</h1>
+                <p>Enter the environmental and rainfall feature values to estimate flood risk.</p>
+            </div>
+
+            <form class="prediction-form" action="/predict" method="POST" novalidate>
+                <div class="form-grid">
+                    <label>
+                        <span>Temperature</span>
+                        <input type="number" name="Temp" step="any" placeholder="Enter temperature">
+                    </label>
+
+                    <label>
+                        <span>Humidity</span>
+                        <input type="number" name="Humidity" step="any" placeholder="Enter humidity">
+                    </label>
+
+                    <label>
+                        <span>Cloud Cover</span>
+                        <input type="number" name="Cloud Cover" step="any" placeholder="Enter cloud cover">
+                    </label>
+
+                    <label>
+                        <span>Annual Rainfall</span>
+                        <input type="number" name="ANNUAL" step="any" placeholder="Enter annual rainfall">
+                    </label>
+
+                    <label>
+                        <span>Jan-Feb Rainfall</span>
+                        <input type="number" name="Jan-Feb" step="any" placeholder="Enter Jan-Feb value">
+                    </label>
+
+                    <label>
+                        <span>Mar-May Rainfall</span>
+                        <input type="number" name="Mar-May" step="any" placeholder="Enter Mar-May value">
+                    </label>
+
+                    <label>
+                        <span>Jun-Sep Rainfall</span>
+                        <input type="number" name="Jun-Sep" step="any" placeholder="Enter Jun-Sep value">
+                    </label>
+
+                    <label>
+                        <span>Oct-Dec Rainfall</span>
+                        <input type="number" name="Oct-Dec" step="any" placeholder="Enter Oct-Dec value">
+                    </label>
+
+                    <label>
+                        <span>Average June Rainfall</span>
+                        <input type="number" name="avgjune" step="any" placeholder="Enter average June value">
+                    </label>
+
+                    <label>
+                        <span>Sub-Division Value</span>
+                        <input type="number" name="sub" step="any" placeholder="Enter subdivision value">
+                    </label>
+                </div>
+
+                <button class="primary-button form-button" type="submit">Submit Prediction</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

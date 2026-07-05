@@ -1,0 +1,229 @@
+:root {
+    --bg: #eef6f8;
+    --surface: #ffffff;
+    --text: #17212b;
+    --muted: #64748b;
+    --primary: #087f8c;
+    --primary-dark: #075e68;
+    --accent: #f4b942;
+    --danger: #c2413a;
+    --danger-dark: #962d29;
+    --safe: #16835f;
+    --safe-dark: #0f6247;
+    --border: #d7e4ea;
+    --shadow: 0 24px 70px rgba(15, 46, 64, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background:
+        linear-gradient(135deg, rgba(8, 127, 140, 0.12), rgba(244, 185, 66, 0.12)),
+        var(--bg);
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero-page,
+.page-shell,
+.result-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 18px;
+}
+
+.hero-card,
+.form-card,
+.result-card {
+    width: min(100%, 980px);
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.hero-card {
+    padding: clamp(34px, 7vw, 78px);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(235, 251, 252, 0.95)),
+        var(--surface);
+}
+
+.form-card {
+    padding: clamp(24px, 5vw, 44px);
+}
+
+.result-card {
+    max-width: 680px;
+    padding: clamp(34px, 6vw, 60px);
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 26px;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: var(--primary);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1.05;
+}
+
+.form-card h1,
+.result-card h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin: 22px 0 32px;
+    font-size: 1.12rem;
+}
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 24px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--primary);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 12px 26px rgba(8, 127, 140, 0.28);
+    transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.primary-button:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 16px 32px rgba(8, 127, 140, 0.34);
+    transform: translateY(-2px);
+}
+
+.prediction-form {
+    display: grid;
+    gap: 24px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+label {
+    display: grid;
+    gap: 8px;
+    color: var(--text);
+    font-weight: 700;
+}
+
+label span {
+    font-size: 0.95rem;
+}
+
+input {
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0 14px;
+    color: var(--text);
+    background: #f8fbfc;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+input:focus {
+    border-color: var(--primary);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(8, 127, 140, 0.14);
+}
+
+.form-button {
+    justify-self: start;
+}
+
+.risk-page {
+    background: linear-gradient(135deg, rgba(194, 65, 58, 0.14), rgba(255, 255, 255, 0.4)), var(--bg);
+}
+
+.safe-page {
+    background: linear-gradient(135deg, rgba(22, 131, 95, 0.14), rgba(255, 255, 255, 0.4)), var(--bg);
+}
+
+.risk-card {
+    border-color: rgba(194, 65, 58, 0.28);
+}
+
+.risk-card .eyebrow,
+.risk-card h1 {
+    color: var(--danger);
+}
+
+.safe-card {
+    border-color: rgba(22, 131, 95, 0.28);
+}
+
+.safe-card .eyebrow,
+.safe-card h1 {
+    color: var(--safe);
+}
+
+.danger-button {
+    background: var(--danger);
+    box-shadow: 0 12px 26px rgba(194, 65, 58, 0.24);
+}
+
+.danger-button:hover {
+    background: var(--danger-dark);
+    box-shadow: 0 16px 32px rgba(194, 65, 58, 0.32);
+}
+
+.safe-button {
+    background: var(--safe);
+    box-shadow: 0 12px 26px rgba(22, 131, 95, 0.24);
+}
+
+.safe-button:hover {
+    background: var(--safe-dark);
+    box-shadow: 0 16px 32px rgba(22, 131, 95, 0.32);
+}
+
+@media (max-width: 720px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+}
