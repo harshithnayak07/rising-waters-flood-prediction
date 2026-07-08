@@ -1,5 +1,11 @@
 # Rising Waters Flood Prediction System
 
+## 🌐 Live Demo
+
+**Live Application:** https://rising-waters-flood-prediction-nktt.onrender.com
+
+> **Note:** This application is hosted on Render's free tier. If the service has been idle, the first request may take up to 60 seconds while the server wakes up.
+
 ## Project Overview
 
 Rising Waters Flood Prediction System is a machine learning-based flood prediction web application built using Flask and XGBoost. The system analyzes weather and rainfall-related parameters, preprocesses the data, compares multiple machine learning models, and uses the best-performing model for flood risk prediction through a responsive web interface.
